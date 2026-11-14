@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Candidaturas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Organizador de Candidaturas</h1>
+        <p>Organizar candidaturas de forma eficiente</p>
+        <form action="" id="formulario">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" required>
+
+            <label for="cargo">Cargo</label>
+            <input type="text" id="cargo" name="cargo" required>
+
+            <label for="link">Link para a vaga</label>
+            <input type="url" id="link" name="link">
+            <label for="data">Data de candidatura</label>
+            <input type="date" id="data" name="data" required>
+            <label for="etapa">Etapa</label>
+            <select id="etapa" name="etapa" required>
+                <option value="enviada">Enviada</option>
+                <option value="entrevista">Entrevista</option>
+                <option value="selecao">Seleção</option>
+                <option value="finalizada">Finalizada</option>
+            </select>
+
+            <button type="submit" id="botao-salvar">Cadastrar candidatura</button>
+            <button type="button" id="botao-cancelar" hidden>Cancelar Edição</button>
+        </form>
+
+        <section>
+            <h2>Candidaturas Cadastradas</h2>
+            <label for="filtro-etapa">Filtrar por Etapa</label>
+            <select id="filtro-etapa">
+                <option value="todas">Todas</option>
+                <option value="enviada">Enviada</option>
+                <option value="entrevista">Entrevista</option>
+                <option value="selecao">Seleção</option>
+                <option value="finalizada">Finalizada</option>
+            </select>
+            <p id="mensagem-vazia" hidden>Nenhuma candidatura encontrada.</p>
+            <p id="contador-candidaturas">0 candidaturas exibidas</p>
+            <ul id="lista-candidaturas">
+                
+            </ul>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
